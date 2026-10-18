@@ -1,0 +1,16 @@
+
+name: Minecraft AFK Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start AFK Bot
+        uses: Minionguyjpro/Afk-bot@v1.0.4
+        with:
+          ip: ${{ secrets.MC_SERVER_IP }}
+          port: ${{ secrets.MC_SERVER_PORT }}
+          name: MyAFKBot
